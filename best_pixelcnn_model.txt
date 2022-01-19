@@ -1,0 +1,15 @@
+voc12_006.pth
+python pixelcnn_sample_combine_cc_topk_fu.py --config=./configs_voc12.yaml --load_model=./blocks_new/voc12/voc12_006.pth --num_iter=10000 --threshold=7 --p_base=0 --flag=0.1 --cc_max=3 --topk=1 --first_unseen=5
+
+context_001_old.pth (best) or context_010.pth
+python pixelcnn_sample_combine_cc_topk_fu.py --config=./configs_context_transfer_pixel-wise.yaml --load_model=./blocks_new/context/context_001.pth --threshold=7 --p_base=0 --flag=-1 --cc_max=3 --topk=1 --first_unseen=5 --num_iter=5000 --start_id=0
+
+cocostuff_004.pth or cocostuff_005.pth (best)
+python pixelcnn_sample_combine_cc_topk_fu.py --config=./configs_coco_transfer_pixel-wise.yaml --load_model=./blocks_new/cocostuff/cocostuff_004.pth --threshold=7 --p_base=0 --flag=-1 --cc_max=3 --topk=1 --first_unseen=5 --num_iter=5000 --start_id=0
+
+
+new:
+
+voc12_006.pth
+python pixelcnn_sample_combine_cc_topk_fu.py --config=./configs_voc12_block-wise_376.yaml --load_model=./blocks_new/voc12/voc12_006.pth --first_unseen=5 --threshold=7 --cc_max=3 --num_iter=10000 --start_id=0 --suffix='_ep6'
+python pixelcnn_sample_combine_cc_topk_fuM_flip.py --config=./configs_voc12_block-wise_376.yaml --load_model=./blocks_new/voc12/voc12_006.pth --first_unseen=5 --cc_max=3 --num_iter=10000 --start_id=0 --suffix='_ep6'
