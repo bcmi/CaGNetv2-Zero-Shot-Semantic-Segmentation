@@ -1,4 +1,4 @@
-# CaGNetv2: From Pixel to Patch
+# CaGNetv2: From Pixel to Patch (accpeted by TNNLS)
 
 Code for *"From Pixel to Patch: Synthesize Context-aware Features for Zero-shot Semantic Segmentation"*.
 
